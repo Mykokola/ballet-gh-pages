@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+
 import { Suspense } from "react";
 
 export const Layout = () => {
@@ -10,6 +11,7 @@ export const Layout = () => {
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
+
       <Footer />
     </>
   );

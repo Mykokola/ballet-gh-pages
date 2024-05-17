@@ -1,6 +1,9 @@
 .no-scroll {
   overflow: hidden;
 }
+#paddingFix {
+  padding: 0;
+}
 .header {
   width: 100%;
   position: absolute;
@@ -49,6 +52,10 @@
   color: inherit;
   margin-left: auto;
   margin-right: auto;
+}
+
+.navName {
+  font-size: 15px;
 }
 
 .navContactsList {
@@ -151,9 +158,18 @@
     color: #000;
     fill: #000;
   }
-
+  .navContactsLink {
+    padding-top: 25px;
+    padding-bottom: 31px;
+  }
+  .currentPageWhite {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  .currentPageBlack {
+    color: rgba(0, 0, 0, 0.7);
+  }
   .currentPage {
-    color: red;
+    color: rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -195,25 +211,28 @@
     gap: 15px;
   }
 
-  .navContactsList {
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 0;
-    margin-top: 37px;
-  }
-
   .navName,
   .navNameMobile,
   .navRouteList {
     font-size: calc(6px + 1vw);
   }
-  .currentPage {
-    color: red;
-  }
+  /* .currentPage {
+    text-decoration: underline;
+    color: #fff;
+  } */
   .combineHeader {
     fill: #fff;
     color: #fff;
     background-color: transparent;
+  }
+
+  .currentPageBlack {
+    text-decoration: underline;
+    color: #000;
+  }
+  .currentPageWhite {
+    text-decoration: underline;
+    color: #fff;
   }
 }
 
@@ -237,124 +256,3 @@
     background-color: transparent;
   }
 }
-/* @media screen and (min-width: 768px) {
-  .navLogo {
-    width: 91.2px;
-    height: 80px;
-  }
-
-  .header {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 99;
-    width: 100%;
-  }
-  .navWrapper {
-    max-width: 1200px;
-    position: relative;
-    align-items: center;
-    height: 99px;
-  }
-  .navLogo {
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-  .navigation {
-    display: flex;
-    align-items: center;
-  }
-  .navLink,
-  .navContactsLink {
-    color: inherit;
-    fill: inherit;
-  }
-  .currentPage {
-    color: red;
-  }
-  .combineHeader {
-    fill: #fff;
-    color: #fff;
-    background-color: transparent;
-  }
-
-  .navRouteList {
-    display: flex;
-  }
-  .navContactsList {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: 37px;
-  }
-} */
-
-/* @media (min-width: 1280px) {
-  .navLink,
-  .navContactsLink {
-    color: inherit;
-    fill: inherit;
-  }
-  .navWrapper {
-    height: 99px;
-    top: 44px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: max-content;
-    max-width: 1280px;
-    align-items: normal;
-  }
-  .navName,
-  .navigation {
-    padding-top: 32px;
-  }
-
-  .navigation {
-    margin-left: 66px;
-    display: flex;
-    gap: 66px;
-  }
-
-  .navRouteList {
-    display: flex;
-    font-family: Cinzel;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    gap: 66px;
-  }
-  .navContactsList {
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 0;
-  }
-
-  .navLogo {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 91.2px;
-    height: 80px;
-  }
-
-  .navName {
-    margin-left: 13px;
-    font-size: 18px;
-    margin-right: 0;
-  }
-
-  .navContactsLink span {
-    font-size: 20px;
-  }
-  .currentPage {
-    color: red;
-  }
-  .combineHeader {
-    fill: #fff;
-    color: #fff;
-    background-color: transparent;
-  }
-} */

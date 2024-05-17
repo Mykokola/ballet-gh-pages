@@ -16,6 +16,7 @@ function Header() {
       isOpen: false,
       displayStyle: {},
     });
+    document.body.style.overflow = "";
   };
 
   const toggleNavMenu = () => {
@@ -48,7 +49,7 @@ function Header() {
 
   return (
     <header className={styles.header}>
-      <div className="container">
+      <div id={styles.paddingFix} className={`container `}>
         <div className={` ${styles.navWrapper} ${headerClass}`}>
           <button
             type="button"
@@ -73,7 +74,7 @@ function Header() {
             </svg>
           </Link>
           <Link className={styles.navName} to={"/"} onClick={closeNavMenu}>
-            Enchanté du ballet
+            Ballet Studio T&Y <br></br>Tkachuk and Yapparova 
           </Link>
           <nav className={styles.navigation} style={navState.displayStyle}>
             <div className={styles.navigationMobile}>
@@ -95,7 +96,7 @@ function Header() {
                 <NavLink
                   onClick={closeNavMenu}
                   className={`${styles.navLink} ${
-                    location.pathname === "/" ? styles.currentPage : ""
+                    location.pathname === "/" ? styles.currentPageWhite : ""
                   }`}
                   to="/"
                 >
@@ -106,7 +107,9 @@ function Header() {
                 <NavLink
                   onClick={closeNavMenu}
                   className={`${styles.navLink} ${
-                    location.pathname === "/teachers" ? styles.currentPage : ""
+                    location.pathname === "/teachers"
+                      ? styles.currentPageBlack
+                      : ""
                   }`}
                   to="/teachers"
                 >
@@ -127,27 +130,16 @@ function Header() {
                 </NavLink>
               </li>
             </ul>
-            <ul className={styles.navContactsList}>
-              <li className={styles.navContactsLinkItem}>
-                <Link
-                  to="mailto:yapparovasabina@gmail.com"
-                  className={styles.navContactsLink}
-                >
-                  <svg width="31" height="22">
-                    <use href={icon + "#icon-mail"}></use>
-                  </svg>
-                  <span>Yapparovasabina@gmail.com</span>
-                </Link>
-              </li>
-              <li className={styles.navContactsLinkItem}>
-                <Link to="tel:+14373293223" className={styles.navContactsLink}>
-                  <svg width="31" height="27">
-                    <use href={icon + "#icon-tel"}></use>
-                  </svg>
-                  <span>+14373293223</span>
-                </Link>
-              </li>
-            </ul>
+
+            <Link
+              to="mailto:balletstudioty@yahoo.com"
+              className={styles.navContactsLink}
+            >
+              <svg width="31" height="22">
+                <use href={icon + "#icon-mail"}></use>
+              </svg>
+              <span>Balletstudioty@yahoo.com</span>
+            </Link>
           </nav>
         </div>
 
